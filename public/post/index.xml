@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Ankit Gubiligari</title>
+    <link>https://gohugo-theme-ananke.pages.dev/post/</link>
+    <description>Recent content in Projects on Ankit Gubiligari</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate>
+    <atom:link href="https://gohugo-theme-ananke.pages.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project 6: Verizon Case Study to Reduce Customer Defaulting on Payments</title>
+      <link>https://gohugo-theme-ananke.pages.dev/post/chapter-6/</link>
+      <pubDate>Wed, 08 Nov 2023 11:25:05 -0400</pubDate>
+      <guid>https://gohugo-theme-ananke.pages.dev/post/chapter-6/</guid>
+      <description>● Led a thorough analysis of Verizon&amp;rsquo;s customer demographic data employing Python and Tableau, strategically tackling profitability challenges and devising preventative measures against future customer defaults on payment plans.
+● Executed a comprehensive data cleansing, transformation, and analysis using Python and Tableau, systematically determining the significance of variables and pinpointing essential factors required for conclusive decision-making.
+● Employed a random forest classification model to effectively address the issue of customer defaults, leveraging advanced statistical techniques to enhance predictive accuracy and refine decision-making processes.</description>
+    </item>
+    <item>
+      <title>Project 5: Fitness Center Case Study to Reduce Customer Churn</title>
+      <link>https://gohugo-theme-ananke.pages.dev/post/chapter-5/</link>
+      <pubDate>Mon, 30 Oct 2023 11:15:58 -0400</pubDate>
+      <guid>https://gohugo-theme-ananke.pages.dev/post/chapter-5/</guid>
+      <description>● Utilized the scikit-learn package in Python to develop a logistic regression model, providing valuable predictive insights for the fitness center to effectively mitigate customer churn.
+● Conducted preliminary data cleansing and exploratory data analysis (EDA) to identify key columns for analysis and determine the necessary data to formulate a comprehensive strategy for churn reduction.
+● Proposed a final AGILE-based solution plan to follow in order to reduce churn by 10%.</description>
+    </item>
+    <item>
+      <title>Project 4: McDonald&#39;s Case Study on Promotions vs. Profit/Foot Traffic</title>
+      <link>https://gohugo-theme-ananke.pages.dev/post/chapter-4/</link>
+      <pubDate>Thu, 12 Oct 2023 11:14:48 -0400</pubDate>
+      <guid>https://gohugo-theme-ananke.pages.dev/post/chapter-4/</guid>
+      <description>● Spearheaded comprehensive analysis of McDonald&amp;rsquo;s food/customer data using Python/Tableau to address profitability challenges and declining foot traffic in franchisee establishments.
+● Involved data integrity assessments, creation of insightful data visualizations, and development of a strategy to enhance profit margins by a targeted 10%.
+● Implemented machine learning algorithms to identify key factors influencing customer preferences and behavior, providing actionable insights for menu optimization and marketing strategies.
+Key Visualization/Insights:
+Corporate Stores are generating more revenue than franchisee stores: All-Day Breakfast promotion release causes spike in breakfast items being sold with decrease in chicken items being sold: Promotion should be deployed within May, August, or November due to sales peaks during these months: Link to EDA: https://github.</description>
+    </item>
+    <item>
+      <title>Project 3: Analysis of Movie Budget and Movie Characteristics on Gross Revenue</title>
+      <link>https://gohugo-theme-ananke.pages.dev/post/chapter-3/</link>
+      <pubDate>Thu, 22 Jun 2023 11:13:32 -0400</pubDate>
+      <guid>https://gohugo-theme-ananke.pages.dev/post/chapter-3/</guid>
+      <description>● Transformed data and conducted correlation testing on chosen dataset, leveraging python packages (pandas, numpy,matplotlib, seaborn).
+● Performed data clean-up on dataset to ensure all variables were numerical in data type and removed null/duplicate values.
+● Created visualization plots (scatterplot/heatmap) to evaluate relationship between budget and gross revenue. Performed 3 correlations tests, with specific emphasis on Pearson’s coefficient to assess relationship between variable pairs.
+● Findings revealed substantial pearson’s coefficient of 0.</description>
+    </item>
+    <item>
+      <title>Project 1: Analysis of Alcohol Consumption and % Health Expenditure on Life Expectancy</title>
+      <link>https://gohugo-theme-ananke.pages.dev/post/chapter-1/</link>
+      <pubDate>Wed, 10 May 2023 10:58:08 -0400</pubDate>
+      <guid>https://gohugo-theme-ananke.pages.dev/post/chapter-1/</guid>
+      <description>● Utilized various R packages (dplyr, ggplot2, corrplot, tidyverse, etc.) to conduct hypothesis testing with a selected dataset.
+● Employed linear regression to construct 2 predictive models, analyzing impact of factors (alcohol consumption, health expenditure, etc.), on the average life expectancy across different countries (both developing and developed).
+● Conducted statistical assessments to examine significance of scientific inquiries involving five+ potential predictors of interest/potential confounding variables. Findings revealed difference of approximately 7.</description>
+    </item>
+    <item>
+      <title>Project 2: COVID-19 Vaccination Trends in the U.S.A</title>
+      <link>https://gohugo-theme-ananke.pages.dev/post/chapter-2/</link>
+      <pubDate>Wed, 15 Feb 2023 11:00:59 -0400</pubDate>
+      <guid>https://gohugo-theme-ananke.pages.dev/post/chapter-2/</guid>
+      <description>Guiding Questions for Analysis:
+How did the population of COVID-19 vaccinated people change over time in 2021?
+How did the number of total distributed vaccinations change in Washington State over time in January, 2021?
+How does the total number of vaccinations distributed affect the number of vaccinated people in Washington in January, 2021?
+Task Completed:
+● Leveraged key R packages (ggplot2, dplyr, tidyverse) to comprehensively analyze the distribution rates of vaccinations across many different states within America.</description>
+    </item>
+    <item>
+      <title>Project 7: Analyzing Apple Stock Revenue Over the History of the Company:</title>
+      <link>https://gohugo-theme-ananke.pages.dev/post/chapter-7/</link>
+      <pubDate>Tue, 08 Nov 2022 11:25:05 -0400</pubDate>
+      <guid>https://gohugo-theme-ananke.pages.dev/post/chapter-7/</guid>
+      <description>● Used MSSQL to clean up/wrangle data for visualization in PowerBI, to assess the decline in Apple stock from 1900s to 2020.
+Key Insights:
+Apple Losing Revenue as the Years increase: Apple Stock Price is steadily flunctauating from 1999 2013: Link to PowerBI Dashboard: https://github.com/ankitgb/PortfolioProjects/blob/main/SQL%26PowerBIProject1.pdf
+Link to SQL Queries:
+https://github.com/ankitgb/PortfolioProjects/blob/main/SQLQuery1Project1.sql
+https://github.com/ankitgb/PortfolioProjects/blob/main/SQLQuery2Project1.sql</description>
+    </item>
+  </channel>
+</rss>
