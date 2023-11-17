@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Project 1: Analysis of Alcohol Consumption and % Health Expenditure on Life Expectancy | Ankit Gubiligari</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="| R | ML : Linear/Logistic Regression | Hypothesis Testing | ">
+    <meta name="generator" content="Hugo 0.120.4">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="https://gohugo-theme-ananke.pages.dev/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Project 1: Analysis of Alcohol Consumption and % Health Expenditure on Life Expectancy" />
+<meta property="og:description" content="| R | ML : Linear/Logistic Regression | Hypothesis Testing | " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gohugo-theme-ananke.pages.dev/post/chapter-1/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-05-10T10:58:08-04:00" />
+<meta property="article:modified_time" content="2023-05-10T10:58:08-04:00" />
+
+<meta itemprop="name" content="Project 1: Analysis of Alcohol Consumption and % Health Expenditure on Life Expectancy">
+<meta itemprop="description" content="| R | ML : Linear/Logistic Regression | Hypothesis Testing | "><meta itemprop="datePublished" content="2023-05-10T10:58:08-04:00" />
+<meta itemprop="dateModified" content="2023-05-10T10:58:08-04:00" />
+<meta itemprop="wordCount" content="484">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Project 1: Analysis of Alcohol Consumption and % Health Expenditure on Life Expectancy"/>
+<meta name="twitter:description" content="| R | ML : Linear/Logistic Regression | Hypothesis Testing | "/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://gohugo-theme-ananke.pages.dev/images/globe.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://gohugo-theme-ananke.pages.dev/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        <img src="https://gohugo-theme-ananke.pages.dev/images/hehe.JPG" class="w100 mw5-ns" alt="Ankit Gubiligari" />
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://gohugo-theme-ananke.pages.dev/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://gohugo-theme-ananke.pages.dev/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://gohugo-theme-ananke.pages.dev/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://www.linkedin.com/in/ankit-gubiligari-4013a026b/" target="_blank" rel="noopener" class="Linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Linkedin link" aria-label="follow on Linkedin——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Project 1: Analysis of Alcohol Consumption and % Health Expenditure on Life Expectancy</div>
+          
+            <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              | R | ML : Linear/Logistic Regression | Hypothesis Testing | 
+            </div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+
+      <h1 class="f1 athelas mt3 mb1">Project 1: Analysis of Alcohol Consumption and % Health Expenditure on Life Expectancy</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-05-10T10:58:08-04:00">May 10, 2023</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>● Utilized various R packages (dplyr, ggplot2, corrplot, tidyverse, etc.) to conduct hypothesis testing with a selected dataset.</p>
+<p>● Employed linear regression to construct 2 predictive models, analyzing impact of factors (alcohol consumption, health expenditure, etc.), on the average life expectancy across different countries (both developing and developed).</p>
+<p>● Conducted statistical assessments to examine significance of scientific inquiries involving five+ potential predictors of interest/potential confounding variables. Findings revealed difference of approximately 7.89 years in life expectancy between developing and developed countries.</p>
+<p>Boxplot of Alcohol Consumption By Developmental Status of Country of Residence:</p>
+<figure><img src="https://gohugo-theme-ananke.pages.dev/images/project1.JPG"/>
+</figure>
+
+<p>Scatter Plot of Percent Health Expenditure (%) on Life Expectancy on Developed vs. Developing Nations:
+<figure><img src="https://gohugo-theme-ananke.pages.dev/images/proj1.JPG"/>
+</figure>
+</p>
+<p>Results From Linear Regression Model on Alcohol Consumption vs. Life Expectancy in Developed vs Undeveloped countries:</p>
+<p>It uses Alcohol consumption and the Status of the country (Developing or Developed) as
+predictors. From the model summary, we can see that the intercept is 77.0276. This is the
+expected value of life expectancy when all other predictors are zero. In this context, it would
+represent the life expectancy in a developed country (as the base category) with zero alcohol
+consumption. The coefficient for alcohol is 0.1602 but is not statistically significant (p = 0.47), meaning there is not enough evidence to conclude that changes in alcohol consumption
+significantly predict changes in life expectancy. This result should be interpreted cautiously, as it doesn&rsquo;t mean that alcohol consumption has no impact on life expectancy, but rather that within the confines of this model and data, we couldn&rsquo;t find a statistically significant relationship. The coefficient for StatusDeveloping is -8.4454, which is statistically significant (p &lt; 0.001). This suggests that all else being equal (i.e., for the same level of alcohol consumption), life expectancy is approximately 8.4454 years lower in developing countries compared to developed countries.</p>
+<p>Results From Linear Regression Model on % Health Expenditure vs. Life Expectancy in Developed vs Undeveloped countries:</p>
+<p>It uses percentage expenditure on health and the Status of the country (Developing or
+Developed) as predictors. The intercept in this model is 76.023044, which represents the
+expected life expectancy in a developed country with zero health expenditure. The coefficient for
+percentage expenditure is 0.004998, which is statistically significant (p = 0.01). This suggests
+that for each unit increase in health expenditure, we expect life expectancy to increase by about
+0.004998 years, holding the country&rsquo;s status constant. The coefficient for StatusDeveloping is -
+7.897322 and is statistically significant (p &lt; 0.001). This suggests that all else being equal (i.e.,
+for the same level of health expenditure), life expectancy is approximately 7.897322 years lower
+in developing countries compared to developed countries. Comparing the two models, both
+models indicate that a country&rsquo;s development status significantly predicts life expectancy. Also,
+neither of these models explains a large proportion of the variance in life expectancy, suggesting
+other significant predictors might not be included in these models.</p>
+<p>Link to EDA: <a href="https://github.com/ankitgb/PortfolioProjects/blob/main/RProject1-%20Regression%20on%20Alcohol%20Consumption%20and%20life%20expectancy.pdf">https://github.com/ankitgb/PortfolioProjects/blob/main/RProject1-%20Regression%20on%20Alcohol%20Consumption%20and%20life%20expectancy.pdf</a></p>
+<p>Link to Report: <a href="https://github.com/ankitgb/PortfolioProjects/blob/main/RProject1%20-%20EDA.pdf">https://github.com/ankitgb/PortfolioProjects/blob/main/RProject1%20-%20EDA.pdf</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://gohugo-theme-ananke.pages.dev/" >
+    &copy;  Ankit Gubiligari 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="https://www.linkedin.com/in/ankit-gubiligari-4013a026b/" target="_blank" rel="noopener" class="Linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Linkedin link" aria-label="follow on Linkedin——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
